@@ -31,6 +31,8 @@ const ActiveButton = styled(Button) `
     }};
 `
 
+import Multiple from './component/multi/Multiple.jsx'
+
 
 class App extends Component {
     state = {
@@ -39,9 +41,7 @@ class App extends Component {
 
     render() {
         return(
-            <>
-            
-                {this.state.value}
+            <>            
                 <div className={style4.borderOne}>
 
                     <div className='colors'>{this.state.value}</div>
@@ -57,6 +57,10 @@ class App extends Component {
                     <Button> styled component </Button>
                     <HoverButton> styled Component2 </HoverButton>
                     <ActiveButton background ='#333'> variable in css </ActiveButton>
+                </div>
+
+                <div className={style4.borderOne}>
+                    <Multiple/>
                 </div>
             </>
         )
